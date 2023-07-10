@@ -25,10 +25,10 @@ body{
     padding:10px 12px;
     text-decoration: none;
 }
-.navbar li a:hover:not(.active){
+.navbar li a:hover{
     background-color: black;
 }
-.active{
+.navbar li a:focus{
     background-color: blue  ;
 }
 .home{
