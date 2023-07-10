@@ -1,5 +1,6 @@
 body{
     margin:0;
+    padding:0;
     background-color: #282525;;
     color:rgb(222, 217, 217);
     font-family: 'Times New Roman', Times, serif;
@@ -36,47 +37,49 @@ body{
 }
 .home h1{
     text-align: center;
-
 }
 .home p{
-    margin:0px 12px;
+    margin:10px 10px;
     font-size:20px;
 }
 .home img{
     display: block;
-    width:33%;
-    height: 400px;
+    width:33.33%;
+    height: 500px;
     float:left;
 }
 .projects{
     display:block;
-    padding:10px;
+    padding:5px;
 }
 .project{
-    display: inline-block;
-    width:33%;
+    float:left;
+    display: block;
+    width:33.33%;
 }
 .project img{
     display: block;
-    height:300px;
+    min-height:300px;
     border:1px solid rgb(222, 217, 217);;
 }
 .project p{
     display: block;
-    height:200px;
+    min-height:200px;
     border:1px solid rgb(222, 217, 217);;
     padding:5px;
 }
 .bio{
     display: block;
-    padding:10px;
-.bio img{
-    display: inline-block;
+    padding:0px 10px;
 }
+.bio img{
+    max-width: 30%;
+    float: left;
+    margin-right: 10px;
 }
 .bio p{
-    display: block;
     font-size: 20px;
+    float:left;
 }
 .bio a{
     text-decoration: none;
