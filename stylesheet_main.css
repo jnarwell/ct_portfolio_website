@@ -1,0 +1,129 @@
+body{
+    margin:0;
+    background-color: #282525;;
+    color:rgb(222, 217, 217);
+    font-family: 'Times New Roman', Times, serif;
+}
+.navbar ul{
+    list-style-type:none;
+    overflow: hidden;
+    background-color:rgb(11, 150, 188);
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    top:0;
+    position:fixed;
+}
+.navbar li{
+    float:left;
+}
+.navbar li a{
+    display:block;
+    color:rgb(222, 217, 217);
+    text-align: center;
+    padding:10px 12px;
+    text-decoration: none;
+}
+.navbar li a:hover:not(.active){
+    background-color: black;
+}
+.active{
+    background-color: blue  ;
+}
+.home{
+    display: block;
+    padding-top: 30px;
+}
+.home h1{
+    text-align: center;
+
+}
+.home p{
+    margin:0px 12px;
+    font-size:20px;
+}
+.home img{
+    display: block;
+    width:33%;
+    height: 400px;
+    float:left;
+}
+.projects{
+    display:block;
+    padding:10px;
+}
+.project{
+    display: inline-block;
+    width:33%;
+}
+.project img{
+    display: block;
+    height:300px;
+    border:1px solid rgb(222, 217, 217);;
+}
+.project p{
+    display: block;
+    height:200px;
+    border:1px solid rgb(222, 217, 217);;
+    padding:5px;
+}
+.bio{
+    display: block;
+    padding:10px;
+.bio img{
+    display: inline-block;
+}
+}
+.bio p{
+    display: block;
+    font-size: 20px;
+}
+.bio a{
+    text-decoration: none;
+    color:rgb(222, 217, 217);;
+}
+.bio_dropdown{
+    position:relative;
+    display:inline-block;
+}
+.bio_dropdown_content{
+    display:none;
+    position:absolute;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    min-width: 100px;
+    z-index: 1;
+}
+.bio_dropdown:hover{
+    color:blue;
+}
+.bio_dropdown:hover .bio_dropdown_content{
+    display: block;
+}
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: rgb(215, 215, 215);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  .contact {
+    border-radius: 5px;
+    padding: 20px;
+  }

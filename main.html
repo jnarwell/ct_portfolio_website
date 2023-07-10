@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<!--- header --->
+    <head>
+        <title>Jamie's Portfolio Website</title>
+        <link rel="stylesheet" href="stylesheet_main.css">
+    </head>
+
+<!--- body --->
+    <body>
+        <div class="navbar">
+            <ul>
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#bio">Bio</a></li>
+                <!-- figure out how to move contact to right-->
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="home" id="home">
+            <h1>Jamie's Coding Temple Portfolio</h1>
+            <p>This portfolio is one part of a coding bootcamp taken during the summer of 2023. 
+                It contains images and links to my projects, a biography, and a contact page. All four
+                sections are subject to edit as the course progresses and more sections might be added.
+                For now please enjoy these photos of some things I love and refer to the biogragy for 
+                further info on me!</p>
+            
+                <br>
+                <img src="images/huck_photo.jpg" title="My dog Huck">
+                <img src="images/IMG_2015.JPG" title="A 3d frog I made for a friend">
+                <img src="images/chb_website.jpeg" title="My favorite bookstore">
+                <br>
+            
+
+
+        </div>
+        <div class="projects" id="projects">
+            <h2>Projects:</h2>
+            <!-- if possible projects should include:image of function, inline code (github link), text description-->
+            <div class="project">
+                <img src="" alt="insert image here">
+                <!--inset here inline code-->
+                <p>In this box will be placed a text description of each project</p>
+            </div>
+            <div class="project">
+                <img src="" alt="insert image here">
+                <!--inset here inline code-->
+                <p>In this box will be placed a text description of each project</p>
+            </div>
+            <div class="project">
+                <img src="" alt="insert image here">
+                <!--inset here inline code-->
+                <!--remove space between boxes-->
+                <p>In this box will be placed a text description of each project</p>
+            </div>
+        </div>
+        <div class="bio" id="bio">
+            <h2>Biography:</h2>
+            <!--Figure out how to get inline block to start at top of image not bottom-->
+            <img src="images/headshot.jpg">
+            <p><a href="https://jamesmarwell.com" class="bio_dropdown"> James "Jamie" Marwell</a> is an incoming freshman at Stanford University, intending to study mechanical
+                engineering. To advance his study in this feild and elevate his electro-mechanical engineering projects
+                he decided to take this course. The goal of his participation is to build a solid foundation in full-stack
+                programming so as to serve as a stepping stone to greater programing skill. Jamie particularly hopes that
+                this course will allow him to delve deeper into the world of Artificial Intellegence. Beyond his love of
+                engineering, Jamie spends hours in used bookstores, reading, playing games, studying history, and working
+                on personal building projects.
+            </p>
+            <!--add jamesmarwell.com display with .bio_dropdown_content class-->
+        </div>
+        <div class="contact" id="contact">
+            <h2>Contact:</h2>
+            <form action="">
+                <label for="first_name">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                <label for="last_name">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+
+        </div>
+    </body>
+
+<!--- footer --->
+    <footer>
+
+    </footer>
+
+</html>
