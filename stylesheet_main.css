@@ -1,0 +1,158 @@
+/* How to make reactive? */
+@font-face {
+    font-family: bit;
+    src: url(./PressStart2P-Regular.ttf);
+}
+/* div{
+    border:2px solid red;
+} */
+.container {
+    min-height:98vh; /*added margin creating overflow*/
+    display: grid;
+    grid-template-columns: 0.5fr 2.6fr 0.6fr 0.3fr;
+    grid-template-rows: 0.3fr 3.1fr 0.3fr 0.3fr;
+    grid-auto-columns: 1fr;
+    gap: 30px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "return return . ."
+      ". about_body . side_bar"
+      ". . . side_bar"
+      ". links . .";
+  }
+
+  #about_body {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.8fr 1.8fr 0.4fr;
+    gap: 30px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "top_block"
+      "main_text"
+      "bottom_block";
+    grid-area: about_body;
+  }
+
+  .top_block { grid-area: top_block; }
+
+  .main_text { grid-area: main_text; }
+
+  .bottom_block { grid-area: bottom_block; }
+
+  #links { grid-area: links; }
+
+  #side_bar { grid-area: side_bar; }
+
+  #return { grid-area: return; }
+
+body{
+    background-color: black;
+    color:white;
+    /* margin:30px; */
+    font-family: bit;
+}
+ul {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+#return{
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    height:50px;
+}
+#return div{
+    height:100%;
+    width: auto;
+}
+#return div a{
+    font-size:45px;
+}
+#return_image a img{
+    height: 100%;
+    padding:0;
+}
+#return_text{
+    padding-top: 12.5px;
+}
+.top_block{
+    display: flex;
+    flex-flow: column;
+}
+.bottom_block{
+    display: flex;
+    flex-flow: column;
+}
+.header{
+    width:40%;
+    color:black;
+    background-color: white;
+    text-align: center;
+}
+.header h1{
+    margin:5px;
+}
+.blinker_text{
+    display: flex;
+    align-items: center;
+}
+#flash_box{
+    background-color: rgba(255, 255, 255, 0.9);
+    height:44%;
+    width:20px;
+    box-shadow: 0 0 10px 1px #555;
+    animation: blink-animation 1.5s steps(2, start) infinite;
+    -webkit-animation: blink-animation 1.5s steps(2, start) infinite;
+  }
+  @keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
+  @-webkit-keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+}
+#main_text p{
+    line-height: 120%;
+    margin:0px 30px;
+}
+#links{
+    margin-left:0px;
+}
+#links ul{
+    display: flex;
+    justify-content:left;
+    /*can't get to go all the way to left*/
+}
+#links ul div li a img{
+    width: 30px;
+    height:30px;
+    margin-right:20px;
+}
+#side_bar{
+    display: flex;
+    flex-flow:column;
+    justify-content: center;
+    align-content: center;
+}
+.side_bar_item{
+    
+    margin-bottom:200px;
+    font-size:30px;
+    -webkit-transform: rotate(90deg); /* Safari and Chrome */
+    -moz-transform: rotate(90deg);   /* Firefox */
+    -ms-transform: rotate(90deg);   /* IE 9 */
+    -o-transform: rotate(90deg);   /* Opera */
+    transform: rotate(90deg);
+}
+#about_side{
+    margin-bottom:175px;
+}
+#experience_side{
+    margin-bottom:0px;
+}
