@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Jamie's Portfolio Website</title>
         <link rel="stylesheet" href="stylesheet_main.css">
+        <script src="./alter_page.js"></script>
     </head>
     <body class="container">
         <div id="return">
@@ -32,25 +33,43 @@
                 <div class="blinker_text"><h2>C:\Users\jcmar\about></h2><div id="flash_box"></div></div>
             </div>
         </div>
-        <!-- <div id="skills">
-            <div class="top_block"><h1>Skills</h1></div>
-            <div id="main_text"><p>Many of my skills come at the intersection of the creative and technical. I work
+        <div id="skills">
+            <div class="top_block">
+                <div id="skills_header"><h1>Skills</h1></div>
+                <div><h2>C:\Users\jcmar>cd skills</h2></div>
+                <div><h2>C:\Users\jcmar\skills>description.txt \s</h2></div>
+            </div>
+            <div class="main_text"><p>Many of my skills come at the intersection of the creative and technical. I work
                 to blend these all together wherever my projects call for them. I am constantly looking to expand my 
                 skillset, learning for the joy of learning and to make me a well rounded engineer.
             </p></div>
-            <div class="bottom_block"></div>
+            <div class="bottom_block">
+                <div><h2>C:\Users\jcmar\skills>cd skill_list</h2></div>
+                <div><h2>C:\Users\jcmar\skills\skill_list> dir</h2></div>
+                <div class="blinker_text"><h2>C:\Users\jcmar\about></h2><div id="flash_box"></div></div>
+            </div>
         </div>
-        <div id="experience">
-            <div class="top_block"><h1>Experience</h1></div>
-            <div id="main_text"><p>During high school I worked for two companies BETA Technologies and NanoFabrica.</p>
-            <p>Outside of these jobs, I devote the majority of my time to personal engineering projects, learning new skills,
-                studying history, acting, and competing in debate tournaments.
-            </p></div>
-            <div class="bottom_block"></div>
-        </div> -->
+        <div id="data_area">
+            <div><h2>Volume in drive C has no label.</h2></div>
+            <div><h2>Volume serial number is 2736-B190</h2></div>
+            <div><h2> </h2></div>
+            <div><h2>Directory of C:\...\skill_list</h2></div>
+            <ul>
+                <div><li>07/12/2023   08:25 AM     .</li></div>
+                <div><li>07/12/2023   08:25 AM     ..</li></div>
+                <div><li>07/12/2023   08:25 AM     design.exe</li></div>
+                <div><li>07/12/2023   08:25 AM     3D_modeling.exe</li></div>
+                <div><li>07/12/2023   08:25 AM     3D_fab.dir</li></div>
+                <div><li>07/12/2023   08:25 AM     woodworking.dir</li></div>
+                <div><li>07/12/2023   08:25 AM     electronics.dir</li></div>
+                <div><li>07/12/2023   08:25 AM     programing.dir</li></div>
+                <div><li>07/12/2023   08:25 AM     game_dev.exe</li></div>
+                <div><li>07/12/2023   08:25 AM     prob_solv.exe</li></div>
+            </ul>
+        </div>
         <div id="side_bar">
             <ul>
-                <div class="side_bar_item" id="about_side"><li><a href="">About</a></li></div>
+                <div class="side_bar_item" id="about_side"><li onclick="to_about(); return false;">About</li></div>
                 <div class="side_bar_item" id="skills_side"><li><a href="">Skills</a></li></div>
                 <div class="side_bar_item" id="experience_side"><li><a href="">Side</a></li></div>
             </ul>
@@ -66,3 +85,11 @@
     </body>
 
 </html>
+        <!-- <div id="experience">
+            <div class="top_block"><h1>Experience</h1></div>
+            <div id="main_text"><p>During high school I worked for two companies BETA Technologies and NanoFabrica.</p>
+            <p>Outside of these jobs, I devote the majority of my time to personal engineering projects, learning new skills,
+                studying history, acting, and competing in debate tournaments.
+            </p></div>
+            <div class="bottom_block"></div>
+        </div> -->

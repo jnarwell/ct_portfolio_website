@@ -3,25 +3,27 @@
     font-family: bit;
     src: url(./PressStart2P-Regular.ttf);
 }
-/* div{
+div{
     border:2px solid red;
-} */
+}
 .container {
-    min-height:98vh; /*added margin creating overflow*/
+    height:98vh; /*added margin creating overflow*/
     display: grid;
-    grid-template-columns: 0.5fr 2.6fr 0.6fr 0.3fr;
+    /* grid-template-columns: 0.5fr 2.6fr 0.6fr 0.3fr; */
+    grid-template-columns: 0.5fr 1.7fr 1.5fr 0.3fr; 
     grid-template-rows: 0.3fr 3.1fr 0.3fr 0.3fr;
     grid-auto-columns: 1fr;
     gap: 30px 0px;
     grid-auto-flow: row;
     grid-template-areas:
       "return return . ."
-      ". about_body . side_bar"
+      /* ". about_body . side_bar" */
+    ". about_body data_area side_bar"
       ". . . side_bar"
       ". links . .";
   }
 
-  #about_body {  display: grid;
+  #about_body {  display: none;
     grid-template-columns: 1fr;
     grid-template-rows: 0.8fr 1.8fr 0.4fr;
     gap: 30px 0px;
@@ -33,17 +35,30 @@
     grid-area: about_body;
   }
 
-  .top_block { grid-area: top_block; }
+  #skills {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.8fr 1.2fr 0.4fr;
+    gap: 30px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "top_block"
+    "main_text"
+    "bottom_block";
+    grid-area: about_body;
+}
+.top_block { grid-area: top_block; }
 
-  .main_text { grid-area: main_text; }
+.main_text { grid-area: main_text; }
 
-  .bottom_block { grid-area: bottom_block; }
+.bottom_block { grid-area: bottom_block; }
 
-  #links { grid-area: links; }
+#data_area{grid-area:data_area}
 
-  #side_bar { grid-area: side_bar; }
+#links { grid-area: links; }
 
-  #return { grid-area: return; }
+#side_bar { grid-area: side_bar; }
+
+#return { grid-area: return; }
 
 body{
     background-color: black;
@@ -87,7 +102,7 @@ a{
     flex-flow: column;
 }
 .header{
-    width:40%;
+    width:31%;
     color:black;
     background-color: white;
     text-align: center;
@@ -155,6 +170,43 @@ a{
 }
 #experience_side{
     margin-bottom:0px;
+}
+
+/*skills specific css*/
+#skills_header{
+    width:26%;
+    color:black;
+    background-color: white;
+    text-align: center;
+}
+#skills_header h1{
+    margin:5px;
+}
+#skills div div h2{
+    font-size: 18px;
+}
+#skills div p{
+    margin-left:30px;
+}
+#skills div div #flash_box{
+    height:55%;
+}
+#data_area{
+    display:block;
+    margin-top: 100px;
+}
+#data_area ul{
+    margin-left:-20px;
+    line-height: 40px;
+}
+#data_area ul div li{
+    white-space: pre-wrap;
+}
+#data_area div h2{
+    font-size: 18px;
+    margin:5px;
+    margin-left: 40px;
+    white-space: pre-wrap;
 }
 @media (max-width:1610px){
     h1{
