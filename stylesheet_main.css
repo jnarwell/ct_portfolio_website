@@ -1,126 +1,318 @@
+/* How to make reactive? */
+@font-face {
+    font-family: bit;
+    src: url(./PressStart2P-Regular.ttf);
+}
+/* div{
+    border:2px solid red;
+} */
+.container {
+    height:98vh; /*added margin creating overflow*/
+    display: grid;
+    grid-template-columns: 0.5fr 2.6fr 0.6fr 0.3fr;
+    /* grid-template-columns: 0.5fr 1.7fr 1.5fr 0.3fr;  */
+    grid-template-rows: 0.3fr 3.1fr 0.3fr 0.3fr;
+    grid-auto-columns: 1fr;
+    gap: 30px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "return return . ."
+      ". about_body . side_bar"
+      ". . . side_bar"
+      ". links . .";
+      /* ". about_body data_area side_bar" */
+    }
+
+  #about_body {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.8fr 1.8fr 0.4fr;
+    gap: 30px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "top_block"
+      "main_text"
+      "bottom_block";
+    grid-area: about_body;
+  }
+
+  #skills {  display: none;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.8fr 1.2fr 0.4fr;
+    gap: 30px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "top_block"
+    "main_text"
+    "bottom_block";
+    grid-area: about_body;
+}
+  #experience {  display: none;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.8fr 1.2fr 0.4fr;
+    gap: 30px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "top_block"
+    "main_text"
+    "bottom_block";
+    grid-area: about_body;
+    width:100%;
+}
+  .top_block { grid-area: top_block; }
+
+.main_text { grid-area: main_text; }
+
+.bottom_block { grid-area: bottom_block; }
+
+.data_area{grid-area:data_area}
+
+#links { grid-area: links; }
+
+#side_bar { grid-area: side_bar; }
+
+#return { grid-area: return; }
+
 body{
-    margin:0;
-    padding:0;
-    background-color: #282525;;
-    color:rgb(222, 217, 217);
-    font-family: 'Times New Roman', Times, serif;
-}
-.navbar ul{
-    list-style-type:none;
-    overflow: hidden;
-    background-color:rgb(11, 150, 188);
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    top:0;
-    position:fixed;
-}
-.navbar li{
-    float:left;
-}
-.navbar li a{
-    display:block;
-    color:rgb(222, 217, 217);
-    text-align: center;
-    padding:10px 12px;
-    text-decoration: none;
-}
-.navbar li a:hover{
     background-color: black;
+    color:white;
+    /* margin:30px; */
+    font-family: bit;
 }
-.navbar li a:focus{
-    background-color: blue  ;
+ul {
+    list-style: none;
 }
-.home{
-    display: block;
-    padding-top: 30px;
+a{
+    text-decoration: none;
+    color:white;
 }
-.home h1{
+#return{
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    height:50px;
+}
+#return div{
+    height:100%;
+    width: auto;
+}
+#return div a{
+    font-size:45px;
+}
+#return_image a img{
+    height: 100%;
+    padding:0;
+}
+#return_text{
+    padding-top: 12.5px;
+}
+.top_block{
+    display: flex;
+    flex-flow: column;
+}
+.bottom_block{
+    display: flex;
+    flex-flow: column;
+}
+.header{
+    width:31%;
+    color:black;
+    background-color: white;
     text-align: center;
 }
-.home p{
-    margin:10px 10px;
-    font-size:20px;
+.header h1{
+    margin:5px;
 }
-.home img{
-    display: block;
-    width:33.33%;
-    height: 500px;
-    float:left;
+.blinker_text{
+    display: flex;
+    align-items: center;
 }
-.projects{
+#flash_box{
+    background-color: rgba(255, 255, 255, 0.9);
+    height:44%;
+    width:20px;
+    box-shadow: 0 0 10px 1px #555;
+    animation: blink-animation 1.5s steps(2, start) infinite;
+    -webkit-animation: blink-animation 1.5s steps(2, start) infinite;
+  }
+  @keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
+  @-webkit-keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+}
+#main_text p{
+    line-height: 120%;
+    margin:0px 30px;
+}
+#links{
+    margin-left:0px;
+}
+#links ul{
+    display: flex;
+    justify-content:left;
+    /*can't get to go all the way to left*/
+}
+#links ul div li a img{
+    width: 30px;
+    height:30px;
+    margin-right:20px;
+}
+#side_bar{
+    display: flex;
+    flex-flow:column;
+    justify-content: center;
+    align-content: center;
+}
+.side_bar_item{
+    
+    margin-bottom:200px;
+    font-size:30px;
+    -webkit-transform: rotate(90deg); /* Safari and Chrome */
+    -moz-transform: rotate(90deg);   /* Firefox */
+    -ms-transform: rotate(90deg);   /* IE 9 */
+    -o-transform: rotate(90deg);   /* Opera */
+    transform: rotate(90deg);
+}
+#about_side{
+    margin-bottom:175px;
+}
+#experience_side{
+    margin-bottom:0px;
+}
+
+/*skills specific css*/
+#skills_header{
+    width:26%;
+    color:black;
+    background-color: white;
+    text-align: center;
+}
+#skills_header h1{
+    margin:5px;
+}
+#skills div div h2{
+    font-size: 18px;
+}
+#skills div p{
+    margin-left:30px;
+}
+#skills div div #flash_box{
+    height:55%;
+}
+#data_area_skills{
+    display:none;
+    margin-top: 100px;
+}
+#data_area_skills ul{
+    margin-left:-20px;
+    line-height: 40px;
+}
+#data_area_skills ul div li{
+    white-space: pre-wrap;
+}
+#data_area_skills div h2{
+    font-size: 18px;
+    margin:5px;
+    margin-left: 40px;
+    white-space: pre-wrap;
+}
+
+/*experience specific css*/
+#experience #main_text{
+    margin-top: -40px;
+    height: 50%;
+}
+#experience_header{
+    width:45%;
+    color:black;
+    background-color: white;
+    text-align: center;
+}
+#experience_header h1{
+    margin:5px;
+}
+#experience .top_block div h2{
+    font-size: 17px;
+}
+#bottom_block_experience{
+    margin-top:-180px;
+}
+#bottom_block_experience div h2{
+    font-size: 17px;
+    margin:5px;
+    margin-left: 40px;
+    white-space: pre-wrap;
+}
+#bottom_block_experience ul{
+    margin-left:-20px;
+    line-height: 35px;
+}
+#bottom_block_experience ul div li{
+    white-space: pre-wrap;
+}
+#bottom_head{
+    margin-left:0px !important;
+}
+#data_area_experience{
     display:block;
-    padding:5px;
 }
-.project{
-    float:left;
-    display: block;
-    width:33.33%;
+#data_area_experience div h2{
+    font-size:17px;
 }
-.project img{
-    display: block;
-    min-height:300px;
-    border:1px solid rgb(222, 217, 217);;
+.experience_block{
+    width:75%;
+    height:200px;
+    margin-left:10%;
+    background-color: rgba(128, 128, 128, 0.219);
+    padding: 1px 10px 0px 10px;
+    margin-bottom: 40px;
 }
-.project p{
-    display: block;
-    margin-top: 0;
-    min-height:200px;
-    border:1px solid rgb(222, 217, 217);;
-    padding:5px;
+.experience_block div h2{
+    font-size: 20px !important;
 }
-.bio{
-    display: block;
-    padding:0px 10px;
+.experience_block div h5{
+    margin-top: 0px;
+    margin-left:5px;
 }
-.bio img{
-    max-width: 30%;
-    float: left;
-    margin-right: 10px;
+.experience_block div p{
+    margin-top: 40px;
+    margin-left:5px;
+    font-size:15px;
 }
-.bio p{
-    font-size: 20px;
-    float:left;
+#first_experience_block h2{
+    margin-top: 50px;
 }
-.bio a{
-    text-decoration: none;
-    color:rgb(222, 217, 217);;
+@media (max-width:1610px){
+    h1{
+        font-size:26px;
+    }
+    h2{
+        font-size:18px;
+    }
 }
-input[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-  }
-  input[type=email], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-  }
-  
-  input[type=submit] {
-    background-color: #04AA6D;
-    color: rgb(215, 215, 215);
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  input[type=submit]:hover {
-    background-color: #45a049;
-  }
-  
-  .contact {
-    border-radius: 5px;
-    padding: 20px;
-  }
+@media (max-width:1340px){
+    h1{
+        font-size:22px;
+    }
+    h2{
+        font-size:14px;
+    }
+    p{
+        font-size: 12px;
+    }
+}
+@media (max-width:430px){
+    h1{
+        font-size:16px;
+    }
+    h2{
+        font-size:10px;
+    }
+    p{
+        font-size: 8px;
+    }
+}
