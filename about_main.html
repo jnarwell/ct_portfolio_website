@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="stylesheet_main.css">
         <script src="./alter_page.js"></script>
     </head>
-    <body class="container">
+    <body class="container" onload="to_about(); return false;">
         <div id="return">
             <div id="return_image">
                 <a href=""><img src="./images/icons/back_icon.png"></a>
@@ -49,15 +49,7 @@
                 <div class="blinker_text"><h2>C:\Users\jcmar\about></h2><div id="flash_box"></div></div>
             </div>
         </div>
-        <!-- <div id="experience">
-            <div class="top_block"><h1>Experience</h1></div>
-            <div id="main_text"><p>During high school I worked for two companies BETA Technologies and NanoFabrica.</p>
-            <p>Outside of these jobs, I devote the majority of my time to personal engineering projects, learning new skills,
-                studying history, acting, and competing in debate tournaments.
-            </p></div>
-            <div class="bottom_block"></div>
-        </div> -->
-        <div id="data_area">
+        <div class="data_area" id="data_area_skills">
             <div><h2>Volume in drive C has no label.</h2></div>
             <div><h2>Volume serial number is 2736-B190</h2></div>
             <div><h2> </h2></div>
@@ -75,11 +67,51 @@
                 <div><li>07/12/2023   08:25 AM     prob_solv.exe</li></div>
             </ul>
         </div>
+        <div id="experience">
+            <div class="top_block">
+                <div id="experience_header"><h1>Experience</h1></div>
+                <div><h2>C:\Users\jcmar>cd experience</h2></div>
+                <div><h2>C:\Users\jcmar\experience>description.txt \s</h2></div>
+            </div>
+            <div id="main_text"><p>During high school I worked for two companies BETA Technologies and NanoFabrica.</p>
+            <p>Outside of these jobs, I devote the majority of my time to personal engineering projects, learning new skills,
+                studying history, acting, and competing in debate tournaments.
+            </p></div>
+            <div class="bottom_block" id="bottom_block_experience">
+                <div><h2 id="bottom_head">C:\Users\jcmar\experience>dir</h2></div>
+                <div><h2>Volume in drive C has no label.</h2></div>
+                <div><h2>Volume serial number is 2736-B190</h2></div>
+                <div><h2> </h2></div>
+                <div><h2>Directory of C:\...\experience</h2></div>
+                <ul>
+                    <div><li>07/12/2023   08:25 AM     .</li></div>
+                    <div><li>07/12/2023   08:25 AM     ..</li></div>
+                    <div><li>07/12/2023   08:25 AM     description.txt</li></div>
+                    <div><li>07/12/2023   08:25 AM     beta_tech.txt</li></div>
+                    <div><li>07/12/2023   08:25 AM     nano-fabrica.txt</li></div>
+        
+                </ul>
+            </div>
+        </div>
+        <div class="data_area" id="data_area_experience">
+            <div id="first_experience_block"><h2>C:\...\experience>beta_tech.txt \s</h2></div>
+            <div class="experience_block">
+                <div><h2>BETA Technologies</h2></div>
+                <div><h5>Mechanical Engineering Intern</h5></div>
+                <div><p>Worked as Mechanical Engineering Intern for the Study Hall, Electronics, Manufacturing, and other teams</p></div>
+            </div>
+            <div><h2>C:\...\experience>nano-fabrica.txt \s</h2></div>
+            <div class="experience_block">
+                <div><h2>NanoFabrica</h2></div>
+                <div><h5>Mechanical Engineering Intern</h5></div>
+                <div><p>Worked as summer Mechanical Engineering Intern on the companies primary cleaning machine for DLP post processing</p></div>
+            </div>
+        </div>
         <div id="side_bar">
             <ul>
                 <div class="side_bar_item" id="about_side"><li onclick="to_about(); return false;">About</li></div>
                 <div class="side_bar_item" id="skills_side"><li onclick="to_skills(); return false;">Skills</li></div>
-                <div class="side_bar_item" id="experience_side"><li><a href="">Side</a></li></div>
+                <div class="side_bar_item" id="experience_side"><li onclick="to_experience(); return false;">Side</li></div>
             </ul>
         </div>
         <div id="links">
