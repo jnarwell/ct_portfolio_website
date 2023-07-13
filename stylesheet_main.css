@@ -3,27 +3,27 @@
     font-family: bit;
     src: url(./PressStart2P-Regular.ttf);
 }
-div{
+/* div{
     border:2px solid red;
-}
+} */
 .container {
     height:98vh; /*added margin creating overflow*/
     display: grid;
-    /* grid-template-columns: 0.5fr 2.6fr 0.6fr 0.3fr; */
-    grid-template-columns: 0.5fr 1.7fr 1.5fr 0.3fr; 
+    grid-template-columns: 0.5fr 2.6fr 0.6fr 0.3fr;
+    /* grid-template-columns: 0.5fr 1.7fr 1.5fr 0.3fr;  */
     grid-template-rows: 0.3fr 3.1fr 0.3fr 0.3fr;
     grid-auto-columns: 1fr;
     gap: 30px 0px;
     grid-auto-flow: row;
     grid-template-areas:
       "return return . ."
-      /* ". about_body . side_bar" */
-    ". about_body data_area side_bar"
+      ". about_body . side_bar"
+    /* ". about_body data_area side_bar" */
       ". . . side_bar"
       ". links . .";
   }
 
-  #about_body {  display: none;
+  #about_body {  display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.8fr 1.8fr 0.4fr;
     gap: 30px 0px;
@@ -35,7 +35,7 @@ div{
     grid-area: about_body;
   }
 
-  #skills {  display: grid;
+  #skills {  display: none;
     grid-template-columns: 1fr;
     grid-template-rows: 0.8fr 1.2fr 0.4fr;
     gap: 30px 0px;
